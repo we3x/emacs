@@ -28,31 +28,32 @@
 
 ;; Assuming you wish to install "iedit" and "magit"
 (ensure-package-installed
- 'evil
- 'helm
- 'projectile
- 'helm-projectile
- 'helm-ag
- 'yaml-mode
- 'js2-mode
- 'js2-highlight-vars
+ 'ag
  'company
  'company-tern
- 'flycheck
- 'php-mode
- 'magit
+ 'emmet-mode
+ 'evil
  'exec-path-from-shell
- 'neotree
- 'powerline
- 'twittering-mode
- 'xkcd
+ 'flycheck
+ 'helm
+ 'helm-ag
+ 'helm-projectile
+ 'js2-highlight-vars
+ 'js2-mode
+ 'magit
+ 'markdown-mode
  'mode-icons
+ 'neotree
  'org
  'org-plus-contrib
+ 'php-mode
+ 'powerline
+ 'projectile
  'scss-mode
+ 'twittering-mode
  'web-mode
- 'emmet-mode
- 'ag)
+ 'xkcd
+ 'yaml-mode)
 
 (setq org-agenda-files (list "~/Desktop/crawleyprint.org"))
 
@@ -85,6 +86,9 @@
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (setq-default scss-compile-at-save nil)
 
