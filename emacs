@@ -4,7 +4,7 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
-
+(add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; start with maximized window
 (setq package-enable-at-startup nil)
 
 (defun ensure-package-installed (&rest packages)
