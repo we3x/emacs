@@ -90,8 +90,6 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-(setq-default scss-compile-at-save nil)
-
 ;; EVIL settings
 (evil-mode t)
 
@@ -143,6 +141,8 @@
 (setq ring-bell-function 'ignore)
 ;; Highlight matching parenthesis
 (setq-default show-paren-mode t)
+;; Do not compile scss files on save
+(setq-default scss-compile-at-save nil)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-p") 'helm-mini)
@@ -170,6 +170,9 @@
 (set-face-background 'hl-line "#3e4446")
 (set-face-attribute 'region nil :background "#777")
 (set-face-foreground 'highlight nil)
+;; Turn on line numbers
+(global-linum-mode t)
+
 
 
 
