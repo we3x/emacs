@@ -163,6 +163,18 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
+(setq helm-split-window-in-side-p t)
+
+(add-to-list 'display-buffer-alist
+             '("\\`\\*helm.*\\*\\'"
+               (display-buffer-in-side-window)
+               (inhibit-same-window . t)
+               (window-height . 0.4)))
+
+(setq helm-swoop-split-with-multiple-windows nil
+        helm-swoop-split-direction 'split-window-vertically
+        helm-swoop-split-window-function 'helm-default-display-buffer)
+
 ;; Turn off line wrapping
 (set-default 'truncate-lines t)
 (setq truncate-partial-width-windows nil)
