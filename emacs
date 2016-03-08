@@ -38,6 +38,7 @@
  'helm
  'helm-ag
  'helm-projectile
+ 'helm-swoop
  'js2-highlight-vars
  'js2-mode
  'magit
@@ -148,6 +149,7 @@
 (global-set-key (kbd "M-p") 'helm-mini)
 (global-set-key (kbd "M-o") 'helm-projectile)
 (global-set-key (kbd "M-[") 'helm-projectile-ag)
+(global-set-key (kbd "M-]") 'helm-swoop)
 (global-set-key (kbd "M-i") 'neotree-toggle)
 (global-set-key (kbd "M-I") 'neotree-change-root)
 
