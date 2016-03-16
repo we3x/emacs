@@ -260,3 +260,15 @@
       (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
       (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
+
+(setq auto-save-default nil)
+(setq company-idle-delay 0)
+
+(global-set-key (kbd "C-c h") 'windmove-left)
+(global-set-key (kbd "C-c l") 'windmove-right)
+(global-set-key (kbd "C-c j") 'windmove-down)
+(global-set-key (kbd "C-c k") 'windmove-up)
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
