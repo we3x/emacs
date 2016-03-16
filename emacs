@@ -2,6 +2,7 @@
 (require 'package)
 
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'load-path "/home/wex/emacs")
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 (add-to-list 'default-frame-alist '(fullscreen . maximized)) ;; start with maximized window
@@ -61,6 +62,7 @@
 (eval-after-load 'php-mode
   '(require 'php-ext))
 
+(require 'autopair)
 (require 'php-mode)
 (require 'powerline)
 (require 'xkcd)
@@ -111,12 +113,16 @@
 (tool-bar-mode -1)
 ;; turn scroll bar
 (scroll-bar-mode -1)
+(autopair-global-mode)
+(menu-bar-mode -1)
 ;; enable flycheck syntax checker
 (global-flycheck-mode)
 ;; Powerline settings
 (powerline-center-evil-theme)
 ;; start server so emacsclient can send files
 (server-start)
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Set and saved directly from Emacs GUI. Magic, don't touch
